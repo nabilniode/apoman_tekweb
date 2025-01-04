@@ -11,32 +11,38 @@ const EditMedicine = () => {
         deskripsi: '',
     });
 
+    // Ambil data obat berdasarkan ID dari localStorage
     useEffect(() => {
-        // Gantikan ini dengan panggilan API atau state global untuk mendapatkan data obat
-        const fetchMedicineData = async () => {
-            const fetchedData = {
-                nama: 'paracetamol',
-                kategori: 'Obat pereda demam',
-                harga: '50000',
-                deskripsi: 'Obat ini digunakan untuk meredakan demam.',
-            };
-            setMedicine(fetchedData);
-        };
+        const medicines = JSON.parse(localStorage.getItem('medicines')) || [];
+        const selectedMedicine = medicines.find((med) => med.id === parseInt(id));
+        if (selectedMedicine) {
+            setMedicine(selectedMedicine);
+        } else {
+            alert('Obat tidak ditemukan!');
+            navigate('/'); // Redirect jika data tidak ditemukan
+        }
+    }, [id, navigate]);
 
-        fetchMedicineData();
-    }, [id]);
-
+    // Perbarui data obat
     const handleSubmit = (e) => {
         e.preventDefault();
+        const medicines = JSON.parse(localStorage.getItem('medicines')) || [];
+        const updatedMedicines = medicines.map((med) =>
+            med.id === parseInt(id) ? { ...medicine, id: parseInt(id) } : med
+        );
+        localStorage.setItem('medicines', JSON.stringify(updatedMedicines));
         console.log('Data obat diperbarui:', medicine);
-        navigate('/');
+        navigate('/'); // Redirect ke halaman utama
     };
 
+    // Hapus data obat
     const handleDelete = () => {
         const confirmDelete = window.confirm('Apakah Anda yakin ingin menghapus obat ini?');
         if (confirmDelete) {
+            const medicines = JSON.parse(localStorage.getItem('medicines')) || [];
+            const filteredMedicines = medicines.filter((med) => med.id !== parseInt(id));
+            localStorage.setItem('medicines', JSON.stringify(filteredMedicines));
             console.log('Data obat dihapus:', id);
-            // Tambahkan logika untuk menghapus data (API atau state global)
             navigate('/'); // Redirect ke halaman utama setelah menghapus
         }
     };
