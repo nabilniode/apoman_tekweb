@@ -1,6 +1,7 @@
 {
   "name": "apoman_tekweb",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "start": "concurrently \"npm run client\" \"npm run server\"",
     "client": "react-scripts start",
@@ -10,14 +11,24 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+<<<<<<< HEAD
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+=======
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+>>>>>>> 4dc7c72f8f7bab3fe9fccf09d924d66d45139bfd
     "react-icons": "^5.4.0",
     "react-router-dom": "^6.6.0",
     "react-scripts": "^5.0.1",
     "web-vitals": "^4.2.4",
     "json-server": "^0.17.0",
     "concurrently": "^7.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.2"
   },
   "browserslist": {
     "production": [

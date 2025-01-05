@@ -1,0 +1,7 @@
+[
+    { "id": 1, "nama": "Paracetamol", "kategori": "Obat Pereda Demam", "harga": "15,000" },
+    { "id": 2, "nama": "Panadol", "kategori": "Obat Sakit Kepala", "harga": "11,000" },
+    { "id": 3, "nama": "Amoxilin", "kategori": "Antibiotik", "harga": "50,000" },
+    { "id": 4, "nama": "Neuralgin", "kategori": "Pereda Nyeri", "harga": "14,000" }
+  ]
+  

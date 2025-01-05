@@ -7,6 +7,7 @@ import MedicineImage from '../foto/medicine.jpg';
 const Home = () => {
     const [medicines, setMedicines] = useState([]);
 
+<<<<<<< HEAD
     useEffect(() => {
         fetch('http://localhost:3001/medicines')
             .then(response => {
@@ -20,6 +21,17 @@ const Home = () => {
             .catch(error => {
                 console.error('Error fetching data:', error);
             });
+=======
+    // Muat data dari localStorage saat komponen dimuat
+    useEffect(() => {
+        const storedMedicines = JSON.parse(localStorage.getItem('medicines')) || [
+            { id: 1, nama: 'Paracetamol', kategori: 'Obat Pereda Demam', harga: '15,000' },
+            { id: 2, nama: 'Panadol', kategori: 'Obat Sakit Kepala', harga: '11,000' },
+            { id: 3, nama: 'Amoxilin', kategori: 'Antibiotik', harga: '50,000' },
+            { id: 4, nama: 'Neuralgin', kategori: 'Pereda Nyeri', harga: '14,000' },
+        ];
+        setMedicines(storedMedicines);
+>>>>>>> 4dc7c72f8f7bab3fe9fccf09d924d66d45139bfd
     }, []);
 
     return (

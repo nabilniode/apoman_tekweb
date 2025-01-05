@@ -12,7 +12,9 @@ const EditMedicine = () => {
         dosis: '',
     });
 
+    // Ambil data obat berdasarkan ID dari localStorage
     useEffect(() => {
+<<<<<<< HEAD
         fetch(`http://localhost:3001/medicines/${id}`)
             .then(response => {
                 console.log(response);
@@ -30,10 +32,22 @@ const EditMedicine = () => {
             .catch(error => {
                 console.error('Error fetching data:', error);
             });
+=======
+        const medicines = JSON.parse(localStorage.getItem('medicines')) || [];
+        const selectedMedicine = medicines.find((med) => med.id === parseInt(id));
+        if (selectedMedicine) {
+            setMedicine(selectedMedicine);
+        } else {
+            alert('Obat tidak ditemukan!');
+            navigate('/'); // Redirect jika data tidak ditemukan
+        }
+>>>>>>> 4dc7c72f8f7bab3fe9fccf09d924d66d45139bfd
     }, [id, navigate]);
 
+    // Perbarui data obat
     const handleSubmit = (e) => {
         e.preventDefault();
+<<<<<<< HEAD
         fetch(`http://localhost:3001/medicines/${id}`, {
             method: 'PUT',
             headers: {
@@ -49,11 +63,22 @@ const EditMedicine = () => {
             .catch(error => {
                 console.error('Error updating data:', error);
             });
+=======
+        const medicines = JSON.parse(localStorage.getItem('medicines')) || [];
+        const updatedMedicines = medicines.map((med) =>
+            med.id === parseInt(id) ? { ...medicine, id: parseInt(id) } : med
+        );
+        localStorage.setItem('medicines', JSON.stringify(updatedMedicines));
+        console.log('Data obat diperbarui:', medicine);
+        navigate('/'); // Redirect ke halaman utama
+>>>>>>> 4dc7c72f8f7bab3fe9fccf09d924d66d45139bfd
     };
 
+    // Hapus data obat
     const handleDelete = () => {
         const confirmDelete = window.confirm('Apakah Anda yakin ingin menghapus obat ini?');
         if (confirmDelete) {
+<<<<<<< HEAD
             fetch(`http://localhost:3001/medicines/${id}`, {
                 method: 'DELETE',
             })
@@ -64,6 +89,13 @@ const EditMedicine = () => {
                 .catch(error => {
                     console.error('Error deleting data:', error);
                 });
+=======
+            const medicines = JSON.parse(localStorage.getItem('medicines')) || [];
+            const filteredMedicines = medicines.filter((med) => med.id !== parseInt(id));
+            localStorage.setItem('medicines', JSON.stringify(filteredMedicines));
+            console.log('Data obat dihapus:', id);
+            navigate('/'); // Redirect ke halaman utama setelah menghapus
+>>>>>>> 4dc7c72f8f7bab3fe9fccf09d924d66d45139bfd
         }
     };
 
