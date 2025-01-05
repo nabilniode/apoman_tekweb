@@ -1,0 +1,68 @@
+{
+  "medicines": [
+    {
+      "id": "1",
+      "nama": "Paracetamol",
+      "kategori": "Obat Pereda Demam",
+      "harga": "15,000",
+      "deskripsi": "Obat untuk meredakan demam.",
+      "dosis": "500mg"
+    },
+    {
+      "id": "2",
+      "nama": "Panadol",
+      "kategori": "Obat Sakit Kepala",
+      "harga": "19,000",
+      "deskripsi": "Obat untuk meredakan sakit kepala.",
+      "dosis": "500mg"
+    },
+    {
+      "id": "3",
+      "nama": "Amoxilin",
+      "kategori": "Antibiotik",
+      "harga": "8.000",
+      "deskripsi": "Antibiotik untuk infeksi bakteri.",
+      "dosis": "250mg"
+    },
+    {
+      "id": "4",
+      "nama": "Neuralgin",
+      "kategori": "Pereda Nyeri",
+      "harga": "15.000",
+      "deskripsi": "Obat untuk meredakan nyeri.",
+      "dosis": "Dewasa: 1–2 tablet, 3–4 kali per hari."
+    },
+    {
+      "id": 1736010254633,
+      "nama": "Sanmol",
+      "kategori": "obat yang umum digunakan untuk meredakan demam dan nyeri ringan hingga sedang. ",
+      "harga": "3.000",
+      "deskripsi": "Obat ini mengandung paracetamol sebagai bahan aktifnya yang bekerja dengan cara mengurangi produksi prostaglandin, zat yang menyebabkan peradangan, demam, dan nyeri.\n\n",
+      "dosis": "Sanmol Tablet: Dewasa: 1 tablet (500 mg atau 650 mg), 3-4 kali sehari. Anak 6-12 tahun: ½ - 1 tablet (500 mg atau 650 mg), 3-4 kali sehari. Sanmol Sirup: Dosis bervariasi tergantung pada usia anak dan konsentrasi paracetamol dalam sirup. Selalu lihat petunjuk penggunaan yang tertera pada kemasan. Sanmol Drops: Dosis bervariasi tergantung pada usia bayi dan konsentrasi paracetamol dalam drops. Selalu lihat petunjuk penggunaan yang tertera pada kemasan."
+    },
+    {
+      "id": 1736010745122,
+      "nama": "imboost forcee",
+      "kategori": "suplemen kandungan vitamin dan mineralnya yang tinggi.",
+      "harga": "66.500",
+      "deskripsi": "Imboost dengan kandungan nutrisi lebih tinggi atau tambahan ekstrak herbal biasanya memiliki harga yang lebih tinggi",
+      "dosis": "1x1"
+    },
+    {
+      "id": 1736048157648,
+      "nama": "Bodrex Flu & Batuk",
+      "kategori": "meredakan gejala flu yang disertai batuk, baik berdahak maupun tidak berdahak.",
+      "harga": "6.000",
+      "deskripsi": "Kandungan utama dalam Bodrex adalah paracetamol, yang bekerja dengan cara mengurangi produksi prostaglandin, zat yang menyebabkan peradangan dan rasa sakit. Beberapa varian juga mengandung bahan aktif lain seperti ibuprofen, kafein, atau phenylephrine yang memiliki fungsi tambahan dalam meredakan gejala tertentu",
+      "dosis": "Selalu ikuti petunjuk penggunaan yang tertera pada kemasan atau anjuran dokter"
+    },
+    {
+      "id": 1736048414556,
+      "nama": "Entrostop",
+      "kategori": "obat yang umum digunakan untuk mengatasi diare",
+      "harga": "10.000",
+      "deskripsi": "obat ini bekerja dengan cara mengikat racun dan bakteri penyebab diare di dalam usus, serta menyerap air berlebih sehingga konsistensi tinja menjadi lebih padat",
+      "dosis": "2 tablet setiap kali setelah diare, maksimal 12 tablet per hari"
+    }
+  ]
+}

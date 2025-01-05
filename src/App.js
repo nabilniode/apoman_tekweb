@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import AddMedicine from './pages/AddMedicine';
 import EditMedicine from './pages/EditMedicine';
 import MedicineDetails from './pages/MedicineDetails';
+import ApiDocumentation from './pages/docs/ApiDocumentation';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/tambah-obat" element={<AddMedicine />} />
           <Route path="/edit/:id" element={<EditMedicine />} />
           <Route path="/details/:id" element={<MedicineDetails />} />
+          <Route path="/docs" element={<ApiDocumentation />} />
         </Routes>
       </div>
     </Router>
